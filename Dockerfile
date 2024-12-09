@@ -1,10 +1,9 @@
 ARG CARLA_VERSION
 ARG ROS_DISTRO
 
-FROM carlasim/carla:${CARLA_VERSION: 0.9.13} AS carla
-FROM ros:${ROS_DISTRO: humble}-ros-base
+FROM carlasim/carla:${CARLA_VERSION:-0.9.13} AS carla
+FROM ros:${ROS_DISTRO:-humble}-ros-base
 
-ENV CARLA_VERSION=$CARLA_VERSION
 ENV DEBIAN_FRONTEND=noninteractive
 
 # dependencies
