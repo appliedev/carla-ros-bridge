@@ -6,7 +6,7 @@ services:
       dockerfile: ./Dockerfile
       args:
         CARLA_VERSION: 0.9.13
-        ROS_DISTRO: humble
+        ROS_DISTRO: foxy
     command:
-      - source /opt/carla-ros-bridge/install/setup.bash && source /opt/carla/setup.bash && ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
+      - source /opt/carla-ros-bridge/install/setup.bash && source /opt/carla/setup.bash && export ROS_DOMAIN_ID=10 && exec ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
     network_mode: "host"
