@@ -7,6 +7,8 @@ services:
       args:
         CARLA_VERSION: 0.9.13
         ROS_DISTRO: foxy
+        ROS_DOMAIN_ID: 10
     command:
-      - source /opt/carla-ros-bridge/install/setup.bash && source /opt/carla/setup.bash && export ROS_DOMAIN_ID=10 && exec ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
+      - source /opt/carla-ros-bridge/install/setup.bash && source /opt/carla/setup.bash && exec ros2 launch carla_ackermann_control carla_ros_bridge_with_ackermann_control.launch.py
     network_mode: "host"
+    ipc: "host"
