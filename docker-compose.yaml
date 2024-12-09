@@ -1,0 +1,12 @@
+name: carla
+services:
+  bridge:
+    container_name: ros_bridge
+    build:
+      dockerfile: ./Dockerfile
+      args:
+        CARLA_VERSION: 0.9.13
+        ROS_DISTRO: humble
+    command:
+      - source /opt/carla-ros-bridge/install/setup.bash && source /opt/carla/setup.bash && ros2 launch carla_ros_bridge carla_ros_bridge.launch.py
+    network_mode: "host"

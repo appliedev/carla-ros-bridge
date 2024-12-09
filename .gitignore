@@ -11,3 +11,8 @@ build.gradle
 build/
 install/
 log/
+
+# Added ignores
+.cache/
+**.json
+**.swp
