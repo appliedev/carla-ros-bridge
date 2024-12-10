@@ -36,7 +36,7 @@ COPY ./docker/content/ros_entrypoint.sh /
 # root .bashrc
 RUN ["/bin/bash", "-c", "echo 'source /opt/carla/setup.bash' >> /root/.bashrc"]
 RUN ["/bin/bash", "-c", "echo 'source /opt/carla-ros-bridge/install/setup.bash' >> /root/.bashrc"]
-ENV ROS_DOMAIN_ID
+ENV ROS_DOMAIN_ID=10
 
 # Entrypoint
 ENTRYPOINT ["/bin/bash", "-c"]
