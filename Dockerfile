@@ -2,7 +2,7 @@ ARG CARLA_VERSION
 ARG ROS_DISTRO
 
 FROM carlasim/carla:${CARLA_VERSION:-0.9.13} AS carla
-FROM ros:${ROS_DISTRO:-humble}-ros-base
+FROM ros:${ROS_DISTRO:-foxy}-ros-base
 
 ENV DEBIAN_FRONTEND=noninteractive
 
