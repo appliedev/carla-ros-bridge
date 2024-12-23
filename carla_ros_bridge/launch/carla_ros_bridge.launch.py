@@ -36,7 +36,7 @@ def generate_launch_description():
         ),
         launch.actions.DeclareLaunchArgument(
             name='fixed_delta_seconds',
-            default_value='1.00',
+            default_value='0.01',
             description='Simulation time (delta seconds) between simulation steps'
         ),
         launch.actions.DeclareLaunchArgument(
