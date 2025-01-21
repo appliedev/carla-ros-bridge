@@ -12,3 +12,6 @@ services:
       - source /opt/carla-ros-bridge/install/setup.bash && source /opt/carla/setup.bash && exec ros2 launch carla_ackermann_control carla_ros_bridge_with_ackermann_control.launch.py
     network_mode: "host"
     ipc: "host"
+    environment:
+      - ROS_DISCOVERY_SERVER
+      - FASTDDS_BUILTIN_TRANSPORTS=DEFAULT
